@@ -1,8 +1,10 @@
 package com.example.demo;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope(value="prototype")
 public class Student_Info {
 	private String Sname;
 	private int SId;
