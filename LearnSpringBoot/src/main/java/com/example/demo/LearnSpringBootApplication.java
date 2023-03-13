@@ -28,9 +28,17 @@ public class LearnSpringBootApplication {
 		 */
 		 
 		 // call consructor using prehand object provided by spring  singleton design pattern 
-		  ConfigurableApplicationContext
-		  context=SpringApplication.run(LearnSpringBootApplication.class, args);
-		
+//		  ConfigurableApplicationContext
+//		  context=SpringApplication.run(LearnSpringBootApplication.class, args);
+		  
+		  
+		  //singleton method create object only once
+		   ConfigurableApplicationContext
+			  context=SpringApplication.run(LearnSpringBootApplication.class, args);
+			  Student_Info obj=context.getBean(Student_Info.class); 
+			  obj.show();
+			  Student_Info obj1=context.getBean(Student_Info.class); 
+			  obj.show();
 		
 		
 		
