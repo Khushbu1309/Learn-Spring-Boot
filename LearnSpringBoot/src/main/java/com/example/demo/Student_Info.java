@@ -7,6 +7,12 @@ public class Student_Info {
 	private String Sname;
 	private int SId;
 	private String STech;
+	
+	
+	public Student_Info() {
+		super();
+		System.out.println("Object created.");
+	}
 	public String getSname() {
 		return Sname;
 	}
@@ -16,6 +22,7 @@ public class Student_Info {
 	public int getSId() {
 		return SId;
 	}
+	
 	public void setSId(int sId) {
 		SId = sId;
 	}
