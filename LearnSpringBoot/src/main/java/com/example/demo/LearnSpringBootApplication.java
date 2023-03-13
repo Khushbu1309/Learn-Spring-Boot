@@ -32,14 +32,23 @@ public class LearnSpringBootApplication {
 //		  context=SpringApplication.run(LearnSpringBootApplication.class, args);
 		  
 		  
-		  //singleton method create object only once
-		   ConfigurableApplicationContext
-			  context=SpringApplication.run(LearnSpringBootApplication.class, args);
-			  Student_Info obj=context.getBean(Student_Info.class); 
-			  obj.show();
-			  Student_Info obj1=context.getBean(Student_Info.class); 
-			  obj.show();
+		  //singleton method create object only once by default
+			/*
+			 * ConfigurableApplicationContext
+			 * context=SpringApplication.run(LearnSpringBootApplication.class, args);
+			 * Student_Info obj=context.getBean(Student_Info.class); obj.show();
+			 * Student_Info obj1=context.getBean(Student_Info.class); obj.show();
+			 */
 		
+		
+			  //Prototype method create object only when youcall getbean() create instance
+			   ConfigurableApplicationContext
+				  context=SpringApplication.run(LearnSpringBootApplication.class, args);
+				  Student_Info obj=context.getBean(Student_Info.class); 
+				  obj.show();
+				  Student_Info obj1=context.getBean(Student_Info.class); 
+				  obj.show();
+			
 		
 		
 		
