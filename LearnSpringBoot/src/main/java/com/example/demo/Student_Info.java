@@ -1,16 +1,25 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
-@Scope(value="prototype")
+@Component  //singleton
+//@Scope(value="prototype")
 public class Student_Info {
 	private String Sname;
 	private int SId;
 	private String STech;
+	@Autowired
+	private Laptop laptop;
 	
 	
+	public Laptop getLaptop() {
+		return laptop;
+	}
+	public void setLaptop(Laptop laptop) {
+		this.laptop = laptop;
+	}
 	public Student_Info() {
 		super();
 		System.out.println("Object created.");
@@ -36,6 +45,7 @@ public class Student_Info {
 	}
 	public void show() {
 		System.out.println("student info class show method");
+		laptop.compile();
 	}
 	
 	
